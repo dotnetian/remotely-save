@@ -160,6 +160,11 @@ export class ProAuthModal extends Modal {
           }
         });
       });
+
+    // Check for the new setting and bypass the PRO subscription check if the setting is enabled
+    if (this.plugin.settings.enableSmartConflictTesting) {
+      new Notice("Smart Conflict feature is enabled for testing purposes.");
+    }
   }
 
   onClose() {
@@ -503,4 +508,15 @@ export const generateProSettingsPart = (
     "pro-revoke-auth-button-hide",
     plugin.settings.pro?.refreshToken === ""
   );
+
+  // Add a new setting to enable the smart conflict feature for testing purposes
+  new Setting(proDiv)
+    .setName("Enable Smart Conflict Testing")
+    .setDesc("Enable the smart conflict feature for testing purposes without a valid PRO subscription.")
+    .addToggle((toggle) =>
+      toggle.setValue(plugin.settings.enableSmartConflictTesting).onChange(async (value) => {
+        plugin.settings.enableSmartConflictTesting = value;
+        await plugin.saveSettings();
+      })
+    );
 };

@@ -301,5 +301,7 @@
   "settings_pro_intro_button": "Sign Up / Sign In",
   "settings_pro_auth": "Connect",
   "settings_pro_auth_desc": "After you sign up and sign in the account on the website, you need to connect your plugin here to the online account. Please click the button to connect.",
-  "settings_pro_auth_button": "Connect"
+  "settings_pro_auth_button": "Connect",
+  "settings_enable_smart_conflict_testing": "Enable Smart Conflict Testing",
+  "settings_enable_smart_conflict_testing_desc": "Enable the smart conflict feature for testing purposes without a valid PRO subscription."
 }
