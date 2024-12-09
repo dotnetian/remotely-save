@@ -20,3 +20,11 @@ You can check out [CLA](./CLA.md).
    ![robot recheck](./assets/cla-process/cla-sign-and-pass.png)
 7. Your pr will be reviewed.
 8. If you sign the CLA and submit some more PRs, the robot should pass the test automatically.
+
+## Enabling Smart Conflict for Testing
+
+To enable the smart conflict feature for testing purposes without a valid PRO subscription, follow these steps:
+
+1. Open the plugin settings.
+2. Scroll down to the "Account (for PRO features)" section.
+3. Enable the "Enable Smart Conflict Testing" option.

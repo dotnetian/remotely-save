@@ -258,7 +258,8 @@ export const checkProRunnableAndFixInplace = async (
     if (
       config.pro.enabledProFeatures.filter(
         (x) => x.featureName === "feature-smart_conflict"
-      ).length === 1
+      ).length === 1 ||
+      config.enableSmartConflictTesting // Check for the new setting and bypass the PRO subscription check if the setting is enabled
     ) {
       // good to go
     } else {
